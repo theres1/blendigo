@@ -1,3 +1,7 @@
+4.0.17
+--------
+* Added gain parameter to Hemi RGB
+
 4.0.16
 --------
 * RGB/XYZ/Blackbody color choosing added to lighlayers

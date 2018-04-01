@@ -222,7 +222,7 @@ class Indigo_Lamp_Hemi_Properties(bpy.types.PropertyGroup, export.xml_builder):
     def get_background_spectrum(self):
         if self.env_bg_SP_type == 'rgb':
             from .. export.materials.spectra import rgb
-            return rgb([i for i in self.env_bg_SP_rgb], gain=[self.env_bg_SP_rgb_gain_val])
+            return rgb([i*self.env_bg_SP_rgb_gain_val for i in self.env_bg_SP_rgb], gain=[1])
         elif self.env_bg_SP_type == 'uniform':
             from .. export.materials.spectra import uniform
             return uniform([
